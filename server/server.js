@@ -1,5 +1,9 @@
-const express = require('express');
+const fastify = require('fastify');
+const dotenv = require('dotenv');
 
-const app = express();
+dotenv.config();
 
-app.listen(4000);
+
+const app = fastify()
+
+app.listen({port: process.env.PORT})
